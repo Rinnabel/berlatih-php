@@ -1,6 +1,6 @@
 <?php
 
-function palindrome_angka($angka) {
+function palindrome_angka(int $angka) {
   // tulis kode di sini
 }
 
