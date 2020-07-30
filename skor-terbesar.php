@@ -1,6 +1,41 @@
 <?php
 function skor_terbesar($arr){
 //kode di sini
+  $result = [];
+  $nilai1 = 0;
+  $nilai2 = 0;
+  $nilai3 = 0;
+
+  foreach($arr as $key => $value) {
+    if($value['nilai'] > $nilai1 && $value['kelas'] == 'Laravel') {
+      $nilai = $value['nilai'];
+      $result[$value['kelas']] =
+      [
+        'nama' => $value['nama'],
+        'kelas' => $value['kelas'],
+        'nilai' => $value['nilai']
+      ];
+    }
+    else if($value['nilai'] > $nilai2 && $value['kelas'] == 'React JS') {
+      $nilai2 = $value['nilai'];
+      $result[$value['kelas']] =
+      [
+        'nama' => $value['nama'],
+        'kelas' => $value['kelas'],
+        'nilai' => $value['nilai']
+      ];
+    }
+    else if($value['nilai'] > $nilai3 && $value['kelas'] == 'React Native') {
+      $nilai3 = $value['nilai'];
+      $result[$value['kelas']] =
+      [
+        'nama' => $value['nama'],
+        'kelas' => $value['kelas'],
+        'nilai' => $value['nilai']
+      ];
+    }
+  }
+  return $result;
 }
 
 // TEST CASES
@@ -32,6 +67,7 @@ $skor = [
   ],
 ];
 
+echo "<pre>";
 print_r(skor_terbesar($skor));
 /* OUTPUT
   Array (
