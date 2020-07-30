@@ -28,7 +28,7 @@ echo papan_catur(4);
  */
 echo "<br>";
 
-//echo papan_catur(8);
+echo papan_catur(8);
 /* 
 # # # # # # # #
  # # # # # # # 
@@ -38,8 +38,10 @@ echo "<br>";
  # # # # # # #
 # # # # # # # #
  # # # # # # #
+*/
+echo "<br>";
 
-echo papan_catur(5) 
+echo papan_catur(5);
 /*
 # # # # #
  # # # #
@@ -47,3 +49,6 @@ echo papan_catur(5)
  # # # # 
 # # # # #
 */
+echo "<br>";
+
+?>
